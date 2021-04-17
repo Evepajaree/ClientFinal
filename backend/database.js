@@ -1,10 +1,9 @@
 const bcrypt = require('bcrypt')
 
-let makeup = {
-    list: [
-        { id: 1, sex: "Male", skincolor:"Black", age:20 ,hairstyle:"Deadrock" ,skincondition:"Good"},
-        { id: 2, name: "Female", skincolor:"White", age:50 ,hairstyle:"Student",skincondition:"Notgood"  }
-
+let users = {
+    users: [
+        { id: 1, username: 'warodom', password: '$2b$10$0AsMSQaUB0AlLnKzgeUOfOE.hWUodtuR4NOU954XLVy2gy3lBWsdO', email: 'wwarodom@gmail.com' },
+        { id: 2, username: 'john', password: '$2b$10$1Bu4tImM/Ms9rtU.8/n/COWpzUAGFB6YlsO5xZqFih1JUxafyFFXa', email: 'john@gmail.com' },
     ]
 }
 
