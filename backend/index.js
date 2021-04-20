@@ -78,10 +78,10 @@ passport.authenticate('jwt', { session: false }),
     res.send(req.user)
 });
 
-router.get('/foo',
+router.get('/comment',
 passport.authenticate('jwt', { session: false }),
 (req, res, next) => {
-    res.send('foo')
+    res.send('comment')
 });
 
 router.route('/shops')
