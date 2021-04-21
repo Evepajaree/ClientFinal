@@ -99,7 +99,7 @@ import Link from 'next/link'
                 {loginForm()}
                 <div>
                     <button onClick={login}>Login</button>
-                    <Link href="/register"><a> ลงทะเบียน </a></Link>  
+                    <button onClick={login}><Link href="/register"><a> ลงทะเบียน </a></Link>   </button>
                 </div>
             </div>
         </Layout>
