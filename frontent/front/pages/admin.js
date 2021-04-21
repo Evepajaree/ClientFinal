@@ -20,6 +20,7 @@ const SWR1 = () => {
     const [price, setPrice] = useState(0)
     const [Deliverycost,setDeliverycost] = useState(0)
     const [Delivery,setDelivery] = useState(0)
+    const [imageurl,setimageurl] = useState('')
     const [income, setIncome] = useState(0)
 
 
@@ -55,9 +56,9 @@ const SWR1 = () => {
     }
 
     const getshop = async (id) => {
-        let shops = await axios.get(`${URL}/${id}`)
+        let shop = await axios.get(`${URL}/${id}`)
         console.log('shop id: ', shop.data)
-        setshop({ id: shop.data.id, name: shop.data.name, price: shop.data.price,  Deliverycost: shop.data.Deliverycost, Delivery: shop.data.Delivery})
+        setshop({ id: shop.data.id, name: shop.data.name, price: shop.data.price,  Deliverycost: shop.data.Deliverycost, Delivery: shop.data.Delivery, imageurl: shop.data.imageurl})
     }
 
 
@@ -71,6 +72,7 @@ const SWR1 = () => {
                     Price:{(shop) ? shop.price : 0}
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
                     <h6>Delivery:{(shop) ? shop.Delivery : 0}</h6>
+                    {/* <h6>imageurl:{(shop) ? shop.imageurl : 0}</h6> */}
                     <button className={styles.byttondelet} onClick={() => deleteshop(shop.id)} >Delete</button>
                     <button className={styles.byttonget} onClick={() => getshop(shop.id)}>Get</button>
                     <button className={styles.byttonupdate} onClick={() => updateshop(shop.id)}>Update</button>
@@ -85,8 +87,8 @@ const SWR1 = () => {
     }
 
 
-    const addshop = async ( name, price, Deliverycost, Delivery) => {
-        let shops = await axios.post(URL, {  name, price, Deliverycost, Delivery })
+    const addshop = async ( name, price, Deliverycost, Delivery,imageurl) => {
+        let shops = await axios.post(URL, {  name, price, Deliverycost, Delivery, imageurl })
         setshops(shops.data)
     }
 
@@ -98,7 +100,7 @@ const SWR1 = () => {
     }
 
     const updateshop = async (id) => {
-        const result = await axios.put(`${URL}/${id}`, { id, name, price, Deliverycost, Delivery })
+        const result = await axios.put(`${URL}/${id}`, { id, name, price, Deliverycost, Delivery,imageurl })
         //console.log('student id update: ', result.data)
         getshops()
     }
@@ -118,6 +120,7 @@ const SWR1 = () => {
         price:<input type="number" onChange={(e) => setPrice(e.target.value)} /> <br />
         Deliverycost:<input type="text" onChange={(e) => setDeliverycost(e.target.value)} /> <br />
         Delivery:<input type="number" onChange={(e) => setDelivery(e.target.value)} /> <br />
+        imageurl:<input type="Linkd" onChange={(e) => setimageurl(e.target.value)} /> <br />
             <button className={styles.byttonadd} onClick={() => addshop(name,  price, Deliverycost, Delivery)}>Add new order</button>
         </ul>
     </div>

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 20px solid #D21F3C;
+    border: 60px solid #FA8072;
     background-color: #89CFEF;
     
   }
@@ -20,8 +20,7 @@
     padding: 1px;
     flex-wrap: wrap;
     width: 80vw;
-    border: 80px solid #CD5C5C;
-    background-color: #73C2FB;
+   
   }
   
   .listItem {
@@ -29,7 +28,7 @@
     flex-direction: column;
     margin: 20px;
     padding: 5px;
-    border: 40px solid #FA8072;
+    border: 20px solid #FA8072;
     font-size: 1.4rem;
     text-align: center;
   }

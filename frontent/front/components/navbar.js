@@ -1,19 +1,73 @@
 import Link from 'next/link'
 import styles from '../styles/menu.module.css'
 const Navbar = () => (
-    <div className={styles.ul}>
-        <ul>
-        <Link href="/register"><a> ลงทะเบียน </a></Link>  |
-        <Link href="/login"><a> เข้าสู่ระบบ </a></Link> | 
-        <Link href="/"><a> หน้าหลัก </a></Link> |
-        <Link href="/profile"><a> เกี่ยวกับเรา </a></Link> |
-        <Link href="/shops"><a> รายการสินค้า </a></Link> |
-        <Link href="/admin"><a> เพิ่มรายการ </a></Link> |
-        <Link href="/help"><a> ช่วยเหลือ </a></Link> | 
-        <Link href="/getConfig"><a> แจ้งโอนเงิน/ส่งสลิป </a></Link> | 
-        <Link href="/comment"><a> แสดงความคิดเห็น </a></Link> |
-        <Link href="/logout"><a> Logout </a></Link> 
-        </ul>
+
+    
+    <div >
+
+<meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
+    <div class="navbar navbar-expand-lg fixed-top  navbar-light bg-primary ">
+  <div class="container-fluid" >
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <Link href="/register"><a class="nav-link active"> ลงทะเบียน </a></Link>  
+            </li>
+            <li class="nav-item">
+               <Link href="/login"><a class="nav-link active"> เข้าสู่ระบบ </a></Link>
+            </li>
+            <li class="nav-item">
+               <Link href="/"><a class="nav-link active"> หน้าหลัก </a></Link> 
+            </li>
+            <li class="nav-item">
+               <Link href="/profile"><a class="nav-link active"> เกี่ยวกับเรา </a></Link> 
+            </li>
+            <li class="nav-item">
+               <Link href="/shops"><a class="nav-link active"> รายการสินค้า </a></Link> 
+            </li>
+            <li class="nav-item">
+               <Link href="/admin"><a class="nav-link active"> เพิ่มรายการ </a></Link> 
+            </li>
+            <li class="nav-item">
+               <Link href="/help"><a class="nav-link active"> วิธีสั่งซื้อ/จัดส่ง </a></Link> 
+            </li>
+            <li class="nav-item">  
+               <Link href="/getConfig"><a class="nav-link active"> โอนเงิน/ส่งสลิป </a></Link> 
+            </li> 
+
+
+            <li class="nav-item">
+            <div className={styles.dropdown}>
+                <span>
+                   <a class="nav-link active">วิธีจัดส่ง/สั่งซื้อ</a> 
+                </span>
+                <div className={styles.content}>
+                    <p><a class="nav-link active" href="/delivery">วิธีจัดส่ง</a></p>
+                    <p><a class="nav-link active" href="/order">วิธีสั่งซื้อ</a></p>
+                    
+                </div>
+            </div>
+            </li>
+
+
+            <li class="nav-item">
+               <Link href="/comment"><a class="nav-link active"> แสดงความคิดเห็น </a></Link> 
+            </li>
+            <li class="nav-item">
+               <Link href="/logout"><a class="nav-link active"> Logout </a></Link> 
+            </li>
+     </ul>
+    </div>
+
+
+
+
+    </div>
+    <br/>
+    <br/>
     </div>
 )
 

@@ -11,13 +11,14 @@ const URL2 = "http://localhost/api/purchase";
 const fetcher = url => axios.get(url).then(res => res.data)
 
 const SWR2 = () => {
-    const [shops, setshops] = useState({ list: [{  id: 1, type: 'cat', age: 1, weight: 5, price: 2000 },] })
+    const [shops, setshops] = useState({ })
     const [shop, setshop] = useState({})
     const [id, setId] = useState(0)
     const [name, setname] = useState('')
     const [price, setPrice] = useState(0)
     const [Deliverycost, setDeliverycost] = useState('')
     const [Delivery, setDelivery] = useState(0)
+    const [imageurl, setimageurl] = useState('')
   //  const { data } = useSWR(URL, fetcher)
     //const { data } = useSWR(URL2, fetcher)
 
@@ -37,9 +38,12 @@ const SWR2 = () => {
 
 
     const printshops = () => {
-        if (shops && shops.length)
+        
+        if (shops && shops.length){
             return shops.map((shop, index) =>
                 <li className={styles.listItem} key={index}>
+                    <h6>Id:{(shop ? shop.id : 0) }</h6>
+                    <img src="$shop.imageurl" width="100" height="100"></img>
                     <h6>name:{(shop) ? shop.name : 0}</h6>
                     <h6>Price:{(shop) ? shop.price : 0}</h6>
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
@@ -47,12 +51,15 @@ const SWR2 = () => {
 
                     <button onClick={() => buyshop(shop.id)} className={styles.byttonupdate} >Buy</button>
                 </li>
-            )
+            )}
         else
             return <li> ไม่มีสินค้า </li>
     }
     return (<div className={styles.container}>
         <Navbar />
+        <br></br>
+        <br></br>
+        <br></br>
         <h1>Littelpig shop</h1>
         <ul className={styles.list} >{printshops()}</ul>
     </div>

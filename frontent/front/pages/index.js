@@ -81,28 +81,7 @@ import Link from 'next/link'
         No login required!
     </div>
     <div>
-    <Layout>
-            <Head>
-                <title>Login</title>
-            </Head>
-            <div className={styles.container}>
-                <Navbar />
-                <h1>Login</h1>
-                <div><b></b> {token.substring(0, 15)}
-                
-                </div>
-                <br/>
-                <div>
-                    Status:  {status}
-                </div>
-                <br />
-                {loginForm()}
-                <div>
-                    <button onClick={login}>Login</button>
-                    <button onClick={login}><Link href="/register"><a> ลงทะเบียน </a></Link>   </button>
-                </div>
-            </div>
-        </Layout>
+    
     </div>
 </Layout>
   )
