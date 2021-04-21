@@ -64,8 +64,8 @@ export default function Login({ token }) {
             <div className={styles.container}>
                 <Navbar />
                 <h1>Login</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
-                <button onClick={copyText}> Copy token </button>
+                <div><b></b> {token.substring(0, 15)}
+                
                 </div>
                 <br/>
                 <div>
@@ -78,6 +78,8 @@ export default function Login({ token }) {
                 </div>
             </div>
         </Layout>
+        
+
     )
 }
 
