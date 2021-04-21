@@ -45,7 +45,7 @@ const SWR1 = () => {
     
     const getshops = async () => {
         let shops = await axios.get(URL)
-        setshops(pets.data)
+        setshops(shops.data)
         //console.log('shop:', shops.data)
     }
     const getIncome = async () => {
@@ -54,7 +54,7 @@ const SWR1 = () => {
         //console.log('income:', income.data)
     }
 
-    const getshops = async (id) => {
+    const getshop = async (id) => {
         let shops = await axios.get(`${URL}/${id}`)
         console.log('shop id: ', shop.data)
         setshop({ id: shop.data.id, name: shop.data.name, price: shop.data.price,  Deliverycost: shop.data.Deliverycost, Delivery: shop.data.Delivery})
@@ -68,7 +68,7 @@ const SWR1 = () => {
                 <li className={styles.listItem} key={index}>
                     <h6>Id:{(shop) ? shop.id : 0}</h6>
                     <h6>name:{(shop) ? shop.name : '-'}</h6>
-                    Price:{(pet) ? pet.price : 0}
+                    Price:{(shop) ? shop.price : 0}
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
                     <h6>Delivery:{(shop) ? shop.Delivery : 0}</h6>
                     <button className={styles.byttondelet} onClick={() => deleteshop(shop.id)} >Delete</button>
@@ -100,7 +100,7 @@ const SWR1 = () => {
     const updateshop = async (id) => {
         const result = await axios.put(`${URL}/${id}`, { id, name, price, Deliverycost, Delivery })
         //console.log('student id update: ', result.data)
-        getPets()
+        getshops()
     }
 
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 //import useSWR, { mutate } from 'swr'
 import Head from 'next/head'
-import styles from '../styles/pets.module.css'
+import styles from '../styles/shops.module.css'
 import Navbar from "../components/navbar";
 
 const URL = "http://localhost/api/shops";
@@ -54,7 +54,7 @@ const SWR2 = () => {
     return (<div className={styles.container}>
         <Navbar />
         <h1>Littelpig shop</h1>
-        <ul className={styles.list} >{printPets()}</ul>
+        <ul className={styles.list} >{printshops()}</ul>
     </div>
     )
 

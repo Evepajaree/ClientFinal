@@ -25,7 +25,10 @@ router.use(express.urlencoded({ extended: false }))
 let shops = {
     list: [
         { id: 1, name: "table", price:999, Deliverycost:"Ems"  ,Delivery:99},
-        { id: 2, name: "chair", price:499, Deliverycost:"Ems"  ,Delivery:99}
+        { id: 2, name: "chair", price:499, Deliverycost:"Ems"  ,Delivery:99},
+        { id: 3, name: "The lamp", price:299, Deliverycost:"Ems"  ,Delivery:99},
+        { id: 4, name: "Bed", price:799, Deliverycost:"Ems"  ,Delivery:99}
+
     ]
 }
 let income = 0
