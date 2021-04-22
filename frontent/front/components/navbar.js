@@ -26,18 +26,26 @@ const Navbar = () => (
                <Link href="/profile"><a class="nav-link active"> เกี่ยวกับเรา </a></Link> 
             </li>
             <li class="nav-item">
+               <Link href="/help"><a class="nav-link active"> รายละเอียดสินค้า </a></Link> 
+            </li>
+            <li class="nav-item">
                <Link href="/shops"><a class="nav-link active"> รายการสินค้า </a></Link> 
             </li>
             <li class="nav-item">
                <Link href="/admin"><a class="nav-link active"> เพิ่มรายการ </a></Link> 
             </li>
-            <li class="nav-item">
-               <Link href="/help"><a class="nav-link active"> วิธีสั่งซื้อ/จัดส่ง </a></Link> 
-            </li>
             <li class="nav-item">  
-               <Link href="/getConfig"><a class="nav-link active"> โอนเงิน/ส่งสลิป </a></Link> 
+            <div className={styles.dropdown}>
+            <span>
+                 <a class="nav-link active">โอนเงิน/ส่งสลิป</a> 
+            </span>
+            <div className={styles.content}>
+                    <p><a class="nav-link active" href="/Transfermoney">โอนเงิน</a></p>
+                    <p><a class="nav-link active" href="/Sendslip">ส่งสลิป</a></p>
+                    
+                </div>
+            </div>
             </li> 
-
 
             <li class="nav-item">
             <div className={styles.dropdown}>

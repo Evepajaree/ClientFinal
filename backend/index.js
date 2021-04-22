@@ -30,6 +30,7 @@ let shops = {
         { id: 4, name: "Bed", price:799, Deliverycost:"Ems"  ,Delivery:99, imageurl:"https://www.inhome.co.th/wp-content/uploads/2018/10/be-1560-s-cem-2.jpg"},
 
     ]
+    
 }
 let income = 0
 

@@ -57,9 +57,7 @@ const SWR2 = () => {
     }
     return (<div className={styles.container}>
         <Navbar />
-        <br></br>
-        <br></br>
-        <br></br>
+        
         <h1>Littelpig shop</h1>
         <ul className={styles.list} >{printshops()}</ul>
     </div>

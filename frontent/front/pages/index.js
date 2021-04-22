@@ -8,7 +8,7 @@ import axios from 'axios'
 import config from '../config/config'
 import Link from 'next/link'
 
-// export default function Home({ token }) {
+ // export default function Home({ token }) {
   export default function Login({ token }) {
 
     const [username, setUsername] = useState('')
@@ -78,7 +78,7 @@ import Link from 'next/link'
           <a href="https://line.me/R/ti/p/%40zhv2221x"><img  src="https://cdn.icon-icons.com/icons2/846/PNG/512/Line_icon-icons.com_67183.png"  width="50" height="50" ></img></a>   
         </p>
         
-        No login required!
+        
     </div>
     <div>
     
