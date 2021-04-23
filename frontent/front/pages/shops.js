@@ -52,7 +52,7 @@ const SWR2 = () => {
                     <button onClick={() => buyshop(shop.id)} className={styles.byttonupdate} >Buy</button>
                 </li>
             )}
-        elsed
+        else
             return <li> ไม่มีสินค้า </li>
     }
     return (<div className={styles.container}>
