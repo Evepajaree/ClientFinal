@@ -43,7 +43,7 @@ const SWR2 = () => {
             return shops.map((shop, index) =>
                 <li className={styles.listItem} key={index}>
                     <h6>Id:{(shop ? shop.id : 0) }</h6>
-                    <img src="$shop.imageurl" width="100" height="100"></img>
+                    <img src={shop.imageurl} width="100" height="100"></img>
                     <h6>name:{(shop) ? shop.name : 0}</h6>
                     <h6>Price:{(shop) ? shop.price : 0}</h6>
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
@@ -52,7 +52,7 @@ const SWR2 = () => {
                     <button onClick={() => buyshop(shop.id)} className={styles.byttonupdate} >Buy</button>
                 </li>
             )}
-        else
+        elsed
             return <li> ไม่มีสินค้า </li>
     }
     return (<div className={styles.container}>

@@ -26,7 +26,7 @@ const Navbar = () => (
                <Link href="/profile"><a class="nav-link active"> เกี่ยวกับเรา </a></Link> 
             </li>
             <li class="nav-item">
-               <Link href="/help"><a class="nav-link active"> รายละเอียดสินค้า </a></Link> 
+               <Link href="/detail"><a class="nav-link active"> รายละเอียดสินค้า </a></Link> 
             </li>
             <li class="nav-item">
                <Link href="/shops"><a class="nav-link active"> รายการสินค้า </a></Link> 
@@ -40,8 +40,8 @@ const Navbar = () => (
                  <a class="nav-link active">โอนเงิน/ส่งสลิป</a> 
             </span>
             <div className={styles.content}>
-                    <p><a class="nav-link active" href="/Transfermoney">โอนเงิน</a></p>
-                    <p><a class="nav-link active" href="/Sendslip">ส่งสลิป</a></p>
+                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/Transfermoney">โอนเงิน</a></p>
+                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/Sendslip">ส่งสลิป</a></p>
                     
                 </div>
             </div>
@@ -53,8 +53,8 @@ const Navbar = () => (
                    <a class="nav-link active">วิธีจัดส่ง/สั่งซื้อ</a> 
                 </span>
                 <div className={styles.content}>
-                    <p><a class="nav-link active" href="/delivery">วิธีจัดส่ง</a></p>
-                    <p><a class="nav-link active" href="/order">วิธีสั่งซื้อ</a></p>
+                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/delivery">วิธีจัดส่ง</a></p>
+                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/order">วิธีสั่งซื้อ</a></p>
                     
                 </div>
             </div>
