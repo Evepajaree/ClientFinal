@@ -43,7 +43,7 @@ const Navbar = () => (
                 </span>
                 <div className={styles.content}>
                     <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/delivery">วิธีจัดส่ง</a></p>
-                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/order">วิธีสั่งซื้อ</a></p>
+                    <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/order">แจ้งที่อยู๋</a></p>
                     <p><a class="nav-link active btn btn-sm btn-outline-secondary" href="/Transfermoney">โอนเงิน</a></p>
                     
                 </div>

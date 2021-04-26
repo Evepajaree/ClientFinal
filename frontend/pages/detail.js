@@ -3,6 +3,7 @@ import Head from 'next/head'
 import config from '../config/config'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
+import Link from 'next/link'
 
 const detail = () => {
     return (<Layout>
@@ -13,6 +14,9 @@ const detail = () => {
             <br></br>
             <br></br>
             <h2>รายละเอียดสินค้าและราคา</h2>
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"></link>
+<br></br>
             ตู้เสื้อผ้า <br></br>
             <a href="https://www.instagram.com/p/CN-2oLNBYmd/?igshid=1c69w86q6ghga&fbclid=IwAR1HFpgyB6Utxt9vs4BUQARhIWsvkRUYpLCEbxfzqyvCsUdjDIjYqNlpiRs">
                 <img  src="https://th-test-11.slatic.net/p/b31ffbeebbf3770af475723c1c17e50a.jpg_720x720q80.jpg_.webp"  width="250" height="250" ></img></a>   
@@ -35,6 +39,12 @@ const detail = () => {
                 <br></br>
 
         </div>
+        <style jsx>{`
+                h1,h2,ul{
+                    font-family: 'Itim', cursive;
+                }
+                
+            `}</style>
 
     </Layout>)
 }

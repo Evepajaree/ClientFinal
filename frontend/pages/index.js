@@ -66,6 +66,8 @@ import Link from 'next/link'
     </Head>
     <div className={styles.container}>
         <Navbar />
+        <br></br>
+
         <h1>LittlepigShop</h1>
         <h1>welcome</h1>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>

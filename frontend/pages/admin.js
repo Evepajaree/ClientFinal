@@ -5,6 +5,7 @@ import styles from '../styles/admin.module.css'
 //import useSWR, { mutate } from 'swr'
 import Navbar from "../components/navbar";
 import withAuth from "../components/withAuth";
+import Link from 'next/link'
 
 
 const URL = "http://localhost/api/shops";
@@ -67,15 +68,18 @@ const SWR1 = () => {
         if (shops && shops.length)
             return shops.map((shop, index) =>
                 <li className={styles.listItem} key={index}>
+                     <div className={styles.box}>
                     <h6>Id:{(shop) ? shop.id : 0}</h6>
+                    <img src={shop.imageurl} width="100" height="100"></img>
                     <h6>name:{(shop) ? shop.name : '-'}</h6>
                     Price:{(shop) ? shop.price : 0}
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
                     <h6>Delivery:{(shop) ? shop.Delivery : 0}</h6>
-                    {/* <h6>imageurl:{(shop) ? shop.imageurl : 0}</h6> */}
                     <button className={styles.byttondelet} onClick={() => deleteshop(shop.id)} >Delete</button>
                     <button className={styles.byttonget} onClick={() => getshop(shop.id)}>Get</button>
                     <button className={styles.byttonupdate} onClick={() => updateshop(shop.id)}>Update</button>
+
+                    </div>
                 </li>
             )
         else
@@ -100,7 +104,7 @@ const SWR1 = () => {
     }
 
     const updateshop = async (id) => {
-        const result = await axios.put(`${URL}/${id}`, { id, name, price, Deliverycost, Delivery,imageurl })
+        const result = await axios.put(`${URL}/${id}`, { id, name, price, Deliverycost, Delivery, imageurl })
         //console.log('student id update: ', result.data)
         getshops()
     }
@@ -110,20 +114,40 @@ const SWR1 = () => {
     return (<div className={styles.container} >
           <Navbar />
         <h1>Admin</h1>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"></link>
         <h2>Income:{printIncome()}</h2>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"></link>
         <h2>Littelpig Shop</h2>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"></link>
+
+
         <ul className={styles.list}  >{printshops()}</ul>
-        selected order: {shop.name} {shop.price}  {shop.Deliverycost} {shop.Delivery}
+        selected order: {shop.name} {shop.price}  {shop.Deliverycost} {shop.Delivery} {shop.imageurl}
         <h2>Add Order</h2>
         <ul className={styles.formadd} >
+           
             name:<input type="text" onChange={(e) => setname(e.target.value)} /> <br />
         price:<input type="number" onChange={(e) => setPrice(e.target.value)} /> <br />
         Deliverycost:<input type="text" onChange={(e) => setDeliverycost(e.target.value)} /> <br />
         Delivery:<input type="number" onChange={(e) => setDelivery(e.target.value)} /> <br />
         imageurl:<input type="Linkd" onChange={(e) => setimageurl(e.target.value)} /> <br />
-            <button className={styles.byttonadd} onClick={() => addshop(name,  price, Deliverycost, Delivery)}>Add new order</button>
+            <button className={styles.byttonadd} onClick={() => addshop(name,  price, Deliverycost, Delivery, imageurl)}>Add new order</button>
+            
+            
         </ul>
+        <style jsx>{`
+                h1,h2,ul{
+                    font-family: 'Itim', cursive;
+
+                    
+                }
+                
+            `}</style>
     </div>
+    
     )
 }
 

@@ -79,8 +79,7 @@ export default function Register({ token }) {
             <div className={styles.container}>
                 <Navbar />
                 <h1>Register</h1>
-                <div><b></b> {token.substring(0, 15)}
-                </div>
+                
                 <br />
             Status:  {status}
                 <br /><br />

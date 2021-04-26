@@ -4,6 +4,7 @@ import axios from 'axios'
 import Head from 'next/head'
 import styles from '../styles/shops.module.css'
 import Navbar from "../components/navbar";
+import Link from 'next/link'
 
 const URL = "http://localhost/api/shops";
 const URL2 = "http://localhost/api/purchase";
@@ -42,25 +43,40 @@ const SWR2 = () => {
         if (shops && shops.length){
             return shops.map((shop, index) =>
                 <li className={styles.listItem} key={index}>
-                    <h6>Id:{(shop ? shop.id : 0) }</h6>
+                <div className={styles.box} >
+                    <h6 >Id:{(shop ? shop.id : 0) }</h6>
                     <img src={shop.imageurl} width="100" height="100"></img>
                     <h6>name:{(shop) ? shop.name : 0}</h6>
                     <h6>Price:{(shop) ? shop.price : 0}</h6>
                     <h6>Deliverycost:{(shop) ? shop.Deliverycost : 0}</h6>
                     <h6>Delivery:{(shop) ? shop.Delivery : 0}</h6>
-
+                    </div>
                     <button onClick={() => buyshop(shop.id)} className={styles.byttonupdate} >Buy</button>
                 </li>
             )}
         else
             return <li> ไม่มีสินค้า </li>
+            
     }
     return (<div className={styles.container}>
         <Navbar />
         
         <h1>Littelpig shop</h1>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"></link>
         <ul className={styles.list} >{printshops()}</ul>
+
+       
+    <style jsx>{`
+                h1,h2,ul{
+                    font-family: 'Itim', cursive;
+                }
+                
+            `}</style>
+    
+
     </div>
+    
     )
 
 }
